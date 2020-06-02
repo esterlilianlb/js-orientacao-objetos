@@ -6,7 +6,14 @@ class Cliente {
 class ContaCorrente {
   agencia;
   saldo;
+
+  sacar(valor) {
+    if(this.saldo >= valor) {
+      this.saldo -=valor;
+    }
+  };
 }
+
 
 const cliente1 = new Cliente();
 
@@ -27,9 +34,9 @@ console.log(contaCorrenteRicardo.saldo);
 
 contaCorrenteRicardo.saldo = 100;
 console.log(contaCorrenteRicardo.saldo);
+contaCorrenteRicardo.sacar(50);
 
-let valorSacado = 200;
-contaCorrenteRicardo.saldo -=valorSacado;
+
 console.log(contaCorrenteRicardo.saldo)
 
 console.log(cliente1)
